@@ -13182,7 +13182,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importing liberaries to be used for analysis</span>
@@ -13200,7 +13200,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Upgrade pandas to use dataframe.explode() function. </span>
@@ -13208,6 +13208,28 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already up-to-date: pandas==0.25.0 in /opt/conda/lib/python3.6/site-packages (0.25.0)
+Requirement already satisfied, skipping upgrade: python-dateutil&gt;=2.6.1 in /opt/conda/lib/python3.6/site-packages (from pandas==0.25.0) (2.6.1)
+Requirement already satisfied, skipping upgrade: numpy&gt;=1.13.3 in /opt/conda/lib/python3.6/site-packages (from pandas==0.25.0) (1.19.5)
+Requirement already satisfied, skipping upgrade: pytz&gt;=2017.2 in /opt/conda/lib/python3.6/site-packages (from pandas==0.25.0) (2017.3)
+Requirement already satisfied, skipping upgrade: six&gt;=1.5 in /opt/conda/lib/python3.6/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas==0.25.0) (1.11.0)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13226,7 +13248,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load your data and print out a few lines. Perform operations to inspect data</span>
@@ -13239,10 +13261,194 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[91]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>imdb_id</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>original_title</th>
+      <th>cast</th>
+      <th>homepage</th>
+      <th>director</th>
+      <th>tagline</th>
+      <th>...</th>
+      <th>overview</th>
+      <th>runtime</th>
+      <th>genres</th>
+      <th>production_companies</th>
+      <th>release_date</th>
+      <th>vote_count</th>
+      <th>vote_average</th>
+      <th>release_year</th>
+      <th>budget_adj</th>
+      <th>revenue_adj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>135397</td>
+      <td>tt0369610</td>
+      <td>32.985763</td>
+      <td>150000000</td>
+      <td>1513528810</td>
+      <td>Jurassic World</td>
+      <td>Chris Pratt|Bryce Dallas Howard|Irrfan Khan|Vi...</td>
+      <td>http://www.jurassicworld.com/</td>
+      <td>Colin Trevorrow</td>
+      <td>The park is open.</td>
+      <td>...</td>
+      <td>Twenty-two years after the events of Jurassic ...</td>
+      <td>124</td>
+      <td>Action|Adventure|Science Fiction|Thriller</td>
+      <td>Universal Studios|Amblin Entertainment|Legenda...</td>
+      <td>6/9/15</td>
+      <td>5562</td>
+      <td>6.5</td>
+      <td>2015</td>
+      <td>1.379999e+08</td>
+      <td>1.392446e+09</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>76341</td>
+      <td>tt1392190</td>
+      <td>28.419936</td>
+      <td>150000000</td>
+      <td>378436354</td>
+      <td>Mad Max: Fury Road</td>
+      <td>Tom Hardy|Charlize Theron|Hugh Keays-Byrne|Nic...</td>
+      <td>http://www.madmaxmovie.com/</td>
+      <td>George Miller</td>
+      <td>What a Lovely Day.</td>
+      <td>...</td>
+      <td>An apocalyptic story set in the furthest reach...</td>
+      <td>120</td>
+      <td>Action|Adventure|Science Fiction|Thriller</td>
+      <td>Village Roadshow Pictures|Kennedy Miller Produ...</td>
+      <td>5/13/15</td>
+      <td>6185</td>
+      <td>7.1</td>
+      <td>2015</td>
+      <td>1.379999e+08</td>
+      <td>3.481613e+08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>262500</td>
+      <td>tt2908446</td>
+      <td>13.112507</td>
+      <td>110000000</td>
+      <td>295238201</td>
+      <td>Insurgent</td>
+      <td>Shailene Woodley|Theo James|Kate Winslet|Ansel...</td>
+      <td>http://www.thedivergentseries.movie/#insurgent</td>
+      <td>Robert Schwentke</td>
+      <td>One Choice Can Destroy You</td>
+      <td>...</td>
+      <td>Beatrice Prior must confront her inner demons ...</td>
+      <td>119</td>
+      <td>Adventure|Science Fiction|Thriller</td>
+      <td>Summit Entertainment|Mandeville Films|Red Wago...</td>
+      <td>3/18/15</td>
+      <td>2480</td>
+      <td>6.3</td>
+      <td>2015</td>
+      <td>1.012000e+08</td>
+      <td>2.716190e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>140607</td>
+      <td>tt2488496</td>
+      <td>11.173104</td>
+      <td>200000000</td>
+      <td>2068178225</td>
+      <td>Star Wars: The Force Awakens</td>
+      <td>Harrison Ford|Mark Hamill|Carrie Fisher|Adam D...</td>
+      <td>http://www.starwars.com/films/star-wars-episod...</td>
+      <td>J.J. Abrams</td>
+      <td>Every generation has a story.</td>
+      <td>...</td>
+      <td>Thirty years after defeating the Galactic Empi...</td>
+      <td>136</td>
+      <td>Action|Adventure|Science Fiction|Fantasy</td>
+      <td>Lucasfilm|Truenorth Productions|Bad Robot</td>
+      <td>12/15/15</td>
+      <td>5292</td>
+      <td>7.5</td>
+      <td>2015</td>
+      <td>1.839999e+08</td>
+      <td>1.902723e+09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>168259</td>
+      <td>tt2820852</td>
+      <td>9.335014</td>
+      <td>190000000</td>
+      <td>1506249360</td>
+      <td>Furious 7</td>
+      <td>Vin Diesel|Paul Walker|Jason Statham|Michelle ...</td>
+      <td>http://www.furious7.com/</td>
+      <td>James Wan</td>
+      <td>Vengeance Hits Home</td>
+      <td>...</td>
+      <td>Deckard Shaw seeks revenge against Dominic Tor...</td>
+      <td>137</td>
+      <td>Action|Crime|Thriller</td>
+      <td>Universal Pictures|Original Film|Media Rights ...</td>
+      <td>4/1/15</td>
+      <td>2947</td>
+      <td>7.3</td>
+      <td>2015</td>
+      <td>1.747999e+08</td>
+      <td>1.385749e+09</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check the shape of dataset</span>
@@ -13253,10 +13459,30 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(10866, 21)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataset at a glance</span>
@@ -13267,10 +13493,53 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10866 entries, 0 to 10865
+Data columns (total 21 columns):
+id                      10866 non-null int64
+imdb_id                 10856 non-null object
+popularity              10866 non-null float64
+budget                  10866 non-null int64
+revenue                 10866 non-null int64
+original_title          10866 non-null object
+cast                    10790 non-null object
+homepage                2936 non-null object
+director                10822 non-null object
+tagline                 8042 non-null object
+keywords                9373 non-null object
+overview                10862 non-null object
+runtime                 10866 non-null int64
+genres                  10843 non-null object
+production_companies    9836 non-null object
+release_date            10866 non-null object
+vote_count              10866 non-null int64
+vote_average            10866 non-null float64
+release_year            10866 non-null int64
+budget_adj              10866 non-null float64
+revenue_adj             10866 non-null float64
+dtypes: float64(4), int64(6), object(11)
+memory usage: 1.7+ MB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataset summary statistics</span>
@@ -13281,16 +13550,354 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[94]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>vote_average</th>
+      <th>release_year</th>
+      <th>budget_adj</th>
+      <th>revenue_adj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10866.000000</td>
+      <td>10866.000000</td>
+      <td>1.086600e+04</td>
+      <td>1.086600e+04</td>
+      <td>10866.000000</td>
+      <td>10866.000000</td>
+      <td>10866.000000</td>
+      <td>10866.000000</td>
+      <td>1.086600e+04</td>
+      <td>1.086600e+04</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>66064.177434</td>
+      <td>0.646441</td>
+      <td>1.462570e+07</td>
+      <td>3.982332e+07</td>
+      <td>102.070863</td>
+      <td>217.389748</td>
+      <td>5.974922</td>
+      <td>2001.322658</td>
+      <td>1.755104e+07</td>
+      <td>5.136436e+07</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>92130.136561</td>
+      <td>1.000185</td>
+      <td>3.091321e+07</td>
+      <td>1.170035e+08</td>
+      <td>31.381405</td>
+      <td>575.619058</td>
+      <td>0.935142</td>
+      <td>12.812941</td>
+      <td>3.430616e+07</td>
+      <td>1.446325e+08</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5.000000</td>
+      <td>0.000065</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>10.000000</td>
+      <td>1.500000</td>
+      <td>1960.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>10596.250000</td>
+      <td>0.207583</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>90.000000</td>
+      <td>17.000000</td>
+      <td>5.400000</td>
+      <td>1995.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>20669.000000</td>
+      <td>0.383856</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>99.000000</td>
+      <td>38.000000</td>
+      <td>6.000000</td>
+      <td>2006.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>75610.000000</td>
+      <td>0.713817</td>
+      <td>1.500000e+07</td>
+      <td>2.400000e+07</td>
+      <td>111.000000</td>
+      <td>145.750000</td>
+      <td>6.600000</td>
+      <td>2011.000000</td>
+      <td>2.085325e+07</td>
+      <td>3.369710e+07</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>417859.000000</td>
+      <td>32.985763</td>
+      <td>4.250000e+08</td>
+      <td>2.781506e+09</td>
+      <td>900.000000</td>
+      <td>9767.000000</td>
+      <td>9.200000</td>
+      <td>2015.000000</td>
+      <td>4.250000e+08</td>
+      <td>2.827124e+09</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>vote_average</th>
+      <th>release_year</th>
+      <th>budget_adj</th>
+      <th>revenue_adj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>id</th>
+      <td>1.000000</td>
+      <td>-0.014350</td>
+      <td>-0.141351</td>
+      <td>-0.099227</td>
+      <td>-0.088360</td>
+      <td>-0.035551</td>
+      <td>-0.058363</td>
+      <td>0.511364</td>
+      <td>-0.189015</td>
+      <td>-0.138477</td>
+    </tr>
+    <tr>
+      <th>popularity</th>
+      <td>-0.014350</td>
+      <td>1.000000</td>
+      <td>0.545472</td>
+      <td>0.663358</td>
+      <td>0.139033</td>
+      <td>0.800828</td>
+      <td>0.209511</td>
+      <td>0.089801</td>
+      <td>0.513550</td>
+      <td>0.609083</td>
+    </tr>
+    <tr>
+      <th>budget</th>
+      <td>-0.141351</td>
+      <td>0.545472</td>
+      <td>1.000000</td>
+      <td>0.734901</td>
+      <td>0.191283</td>
+      <td>0.632702</td>
+      <td>0.081014</td>
+      <td>0.115931</td>
+      <td>0.968963</td>
+      <td>0.622505</td>
+    </tr>
+    <tr>
+      <th>revenue</th>
+      <td>-0.099227</td>
+      <td>0.663358</td>
+      <td>0.734901</td>
+      <td>1.000000</td>
+      <td>0.162838</td>
+      <td>0.791175</td>
+      <td>0.172564</td>
+      <td>0.057048</td>
+      <td>0.706427</td>
+      <td>0.919110</td>
+    </tr>
+    <tr>
+      <th>runtime</th>
+      <td>-0.088360</td>
+      <td>0.139033</td>
+      <td>0.191283</td>
+      <td>0.162838</td>
+      <td>1.000000</td>
+      <td>0.163278</td>
+      <td>0.156835</td>
+      <td>-0.117204</td>
+      <td>0.221114</td>
+      <td>0.175676</td>
+    </tr>
+    <tr>
+      <th>vote_count</th>
+      <td>-0.035551</td>
+      <td>0.800828</td>
+      <td>0.632702</td>
+      <td>0.791175</td>
+      <td>0.163278</td>
+      <td>1.000000</td>
+      <td>0.253823</td>
+      <td>0.107948</td>
+      <td>0.587051</td>
+      <td>0.707942</td>
+    </tr>
+    <tr>
+      <th>vote_average</th>
+      <td>-0.058363</td>
+      <td>0.209511</td>
+      <td>0.081014</td>
+      <td>0.172564</td>
+      <td>0.156835</td>
+      <td>0.253823</td>
+      <td>1.000000</td>
+      <td>-0.117632</td>
+      <td>0.093039</td>
+      <td>0.193085</td>
+    </tr>
+    <tr>
+      <th>release_year</th>
+      <td>0.511364</td>
+      <td>0.089801</td>
+      <td>0.115931</td>
+      <td>0.057048</td>
+      <td>-0.117204</td>
+      <td>0.107948</td>
+      <td>-0.117632</td>
+      <td>1.000000</td>
+      <td>0.016793</td>
+      <td>-0.066256</td>
+    </tr>
+    <tr>
+      <th>budget_adj</th>
+      <td>-0.189015</td>
+      <td>0.513550</td>
+      <td>0.968963</td>
+      <td>0.706427</td>
+      <td>0.221114</td>
+      <td>0.587051</td>
+      <td>0.093039</td>
+      <td>0.016793</td>
+      <td>1.000000</td>
+      <td>0.646607</td>
+    </tr>
+    <tr>
+      <th>revenue_adj</th>
+      <td>-0.138477</td>
+      <td>0.609083</td>
+      <td>0.622505</td>
+      <td>0.919110</td>
+      <td>0.175676</td>
+      <td>0.707942</td>
+      <td>0.193085</td>
+      <td>-0.066256</td>
+      <td>0.646607</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13307,7 +13914,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of duplicated items</span>
@@ -13318,10 +13925,30 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[96]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># view duplicated items</span>
@@ -13332,10 +13959,98 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[97]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>imdb_id</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>original_title</th>
+      <th>cast</th>
+      <th>homepage</th>
+      <th>director</th>
+      <th>tagline</th>
+      <th>...</th>
+      <th>overview</th>
+      <th>runtime</th>
+      <th>genres</th>
+      <th>production_companies</th>
+      <th>release_date</th>
+      <th>vote_count</th>
+      <th>vote_average</th>
+      <th>release_year</th>
+      <th>budget_adj</th>
+      <th>revenue_adj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2090</th>
+      <td>42194</td>
+      <td>tt0411951</td>
+      <td>0.59643</td>
+      <td>30000000</td>
+      <td>967000</td>
+      <td>TEKKEN</td>
+      <td>Jon Foo|Kelly Overton|Cary-Hiroyuki Tagawa|Ian...</td>
+      <td>NaN</td>
+      <td>Dwight H. Little</td>
+      <td>Survival is no game</td>
+      <td>...</td>
+      <td>In the year of 2039, after World Wars destroy ...</td>
+      <td>92</td>
+      <td>Crime|Drama|Action|Thriller|Science Fiction</td>
+      <td>Namco|Light Song Films</td>
+      <td>3/20/10</td>
+      <td>110</td>
+      <td>5.0</td>
+      <td>2010</td>
+      <td>30000000.0</td>
+      <td>967000.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 21 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check for number of missing values, if any</span>
@@ -13343,6 +14058,47 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id                         0
+imdb_id                   10
+popularity                 0
+budget                     0
+revenue                    0
+original_title             0
+cast                      76
+homepage                7930
+director                  44
+tagline                 2824
+keywords                1493
+overview                   4
+runtime                    0
+genres                    23
+production_companies    1030
+release_date               0
+vote_count                 0
+vote_average               0
+release_year               0
+budget_adj                 0
+revenue_adj                0
+dtype: int64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13356,7 +14112,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop columns that are not necessary for the analysis</span>
@@ -13372,10 +14128,109 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue_adj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>135397</td>
+      <td>32.985763</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1.392446e+09</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>76341</td>
+      <td>28.419936</td>
+      <td>Mad Max: Fury Road</td>
+      <td>120</td>
+      <td>6185</td>
+      <td>2015</td>
+      <td>3.481613e+08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>262500</td>
+      <td>13.112507</td>
+      <td>Insurgent</td>
+      <td>119</td>
+      <td>2480</td>
+      <td>2015</td>
+      <td>2.716190e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>140607</td>
+      <td>11.173104</td>
+      <td>Star Wars: The Force Awakens</td>
+      <td>136</td>
+      <td>5292</td>
+      <td>2015</td>
+      <td>1.902723e+09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>168259</td>
+      <td>9.335014</td>
+      <td>Furious 7</td>
+      <td>137</td>
+      <td>2947</td>
+      <td>2015</td>
+      <td>1.385749e+09</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data summary of relevant columns</span>
@@ -13386,10 +14241,39 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10866 entries, 0 to 10865
+Data columns (total 7 columns):
+id                10866 non-null int64
+popularity        10866 non-null float64
+original_title    10866 non-null object
+runtime           10866 non-null int64
+vote_count        10866 non-null int64
+release_year      10866 non-null int64
+revenue_adj       10866 non-null float64
+dtypes: float64(2), int64(4), object(1)
+memory usage: 594.4+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of missing values in the relevant columns</span>
@@ -13397,6 +14281,33 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[101]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id                0
+popularity        0
+original_title    0
+runtime           0
+vote_count        0
+release_year      0
+revenue_adj       0
+dtype: int64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13413,7 +14324,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check for duplicates</span>
@@ -13421,6 +14332,26 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[102]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13437,7 +14368,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop duplicate and recheck for duplicate</span>
@@ -13449,10 +14380,30 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[103]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># rename revenue_adj column to revenue</span>
@@ -13464,10 +14415,69 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[104]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>135397</td>
+      <td>32.985763</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1.392446e+09</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># round popularity and revenue columns and convert to in data types</span>
@@ -13480,10 +14490,69 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[105]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>135397</td>
+      <td>33</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1392445893</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># investigate datatypes</span>
@@ -13494,10 +14563,37 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[106]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id                 int64
+popularity         int64
+original_title    object
+runtime            int64
+vote_count         int64
+release_year       int64
+revenue            int64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert id and release_year columns to string data type and check data types</span>
@@ -13510,10 +14606,37 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[107]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id                object
+popularity         int64
+original_title    object
+runtime            int64
+vote_count         int64
+release_year      object
+revenue            int64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set index to id coulumn</span>
@@ -13522,6 +14645,72 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[108]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>135397</th>
+      <td>33</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1392445893</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13536,7 +14725,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to find the movie title that generated the overall highest revenue</span>
@@ -13545,6 +14734,28 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[109]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id
+19995    Avatar
+Name: original_title, dtype: object</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13568,7 +14779,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to answer this question, lets get all the movies with release_date as 2015</span>
@@ -13580,10 +14791,112 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[110]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>135397</th>
+      <td>33</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1392445893</td>
+    </tr>
+    <tr>
+      <th>76341</th>
+      <td>28</td>
+      <td>Mad Max: Fury Road</td>
+      <td>120</td>
+      <td>6185</td>
+      <td>2015</td>
+      <td>348161292</td>
+    </tr>
+    <tr>
+      <th>262500</th>
+      <td>13</td>
+      <td>Insurgent</td>
+      <td>119</td>
+      <td>2480</td>
+      <td>2015</td>
+      <td>271619025</td>
+    </tr>
+    <tr>
+      <th>140607</th>
+      <td>11</td>
+      <td>Star Wars: The Force Awakens</td>
+      <td>136</td>
+      <td>5292</td>
+      <td>2015</td>
+      <td>1902723130</td>
+    </tr>
+    <tr>
+      <th>168259</th>
+      <td>9</td>
+      <td>Furious 7</td>
+      <td>137</td>
+      <td>2947</td>
+      <td>2015</td>
+      <td>1385748801</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The movies title that has the max revenue in 2015</span>
@@ -13594,10 +14907,32 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[111]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id
+140607    Star Wars: The Force Awakens
+Name: original_title, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#comparing vote count and revenue in 2015</span>
@@ -13605,6 +14940,28 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[112]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>id
+76341    Mad Max: Fury Road
+Name: original_title, dtype: object</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13628,7 +14985,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mean runtime of movies released in 2015</span>
@@ -13636,6 +14993,26 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[113]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>96.3751987281399</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13659,7 +15036,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the count of movies in the entire dataset with runtime above 120 minutes</span>
@@ -13667,6 +15044,26 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[114]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1580</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13690,7 +15087,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get all the movies with release_year from 2010 to 2015</span>
@@ -13702,14 +15099,160 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[115]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>popularity</th>
+      <th>original_title</th>
+      <th>runtime</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+      <th>revenue</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>135397</th>
+      <td>33</td>
+      <td>Jurassic World</td>
+      <td>124</td>
+      <td>5562</td>
+      <td>2015</td>
+      <td>1392445893</td>
+    </tr>
+    <tr>
+      <th>76341</th>
+      <td>28</td>
+      <td>Mad Max: Fury Road</td>
+      <td>120</td>
+      <td>6185</td>
+      <td>2015</td>
+      <td>348161292</td>
+    </tr>
+    <tr>
+      <th>262500</th>
+      <td>13</td>
+      <td>Insurgent</td>
+      <td>119</td>
+      <td>2480</td>
+      <td>2015</td>
+      <td>271619025</td>
+    </tr>
+    <tr>
+      <th>140607</th>
+      <td>11</td>
+      <td>Star Wars: The Force Awakens</td>
+      <td>136</td>
+      <td>5292</td>
+      <td>2015</td>
+      <td>1902723130</td>
+    </tr>
+    <tr>
+      <th>168259</th>
+      <td>9</td>
+      <td>Furious 7</td>
+      <td>137</td>
+      <td>2947</td>
+      <td>2015</td>
+      <td>1385748801</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># group by release_year, sum of revenue per year and plot bar graph</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;release_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">revenue</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[116]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>release_year
+2010    21959031545
+2011    22970460100
+2012    23428699208
+2013    23123424441
+2014    22411204689
+2015    24621443639
+Name: revenue, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># group by release_year, sum of revenue per year and plot bar graph</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;release_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">revenue</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ploting bar graph to show revenue generated from 2010 to 2015.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">release_year</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Release Years&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Revenue per year from 2010 to 2015&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13800,7 +15343,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># popularity and vote counts for the entire dataset and for datasets from 2010 to 2015?</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">vote_count</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">vote_count</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vote counts&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Popularity vs Vote counts - entire dataset&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13824,7 +15370,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># popularity and revenue for the entire dataset </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Popularity vs Revenue - entire dataset&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13838,7 +15387,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># and for datasets from 2010 to 2015?</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">revenue</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">popularity</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Popularity vs vote counts - 2010 to 2015&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13862,7 +15414,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># runtime and revenue for the overall</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">runtime</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">runtime</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Runtime&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Runtime vs Revenue - entire dataset&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13886,7 +15441,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># vote_count and revenue for the overall</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">vote_count</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">vote_count</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vote counts&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Popularity vs vote counts - entire dataset&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13921,7 +15479,7 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id='conclusions'></a></p>
-<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><blockquote><p>From the analysis so far, a very strong positive correlation exist between vote count and revenue although there is no proof that vote count and revenue have a direct proportion relationship. A query of the dataset for release year from 2010 to 2015 shows that 2015 has the highest revenue. The trend shown in the plot below shows that higest vote count does not necessarily imply highest revenue. It is shown that between  2010 and 2015 release years, highest revenue is in 2015 while highest vote count is in 2013.</p>
+<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><blockquote><p>From the analysis so far, a very strong positive correlation exist between vote count and revenue although there is no proof that vote count and revenue have a direct proportion relationship. A query of the dataset for release year from 2010 to 2015 shows that 2015 has the highest revenue. The trend shown in the plot below shows that higest vote count does not necessarily imply highest revenue. It is shown that between  2010 and 2015 release years, highest revenue is in 2015 while highest vote count is in 2010.</p>
 <ul>
 <li>There is need for additional research, and more information (data) to determine what exacly drives revenue growth for the dataset used here.</li>
 </ul>
@@ -13936,7 +15494,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#trend in revenue for dataset from 2010 to 2015</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;release_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">revenue</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;line&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">release_year</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">revenue</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Release Years&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Revenue per year from 2010 to 2015&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13950,7 +15511,10 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#trend in revenue for dataset from 2010 to 2015</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;release_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">vote_count</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;line&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">release_year</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">vote_count</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;purple&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Release Years&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vote counts&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Vote counts per year from 2010 to 2015&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13975,7 +15539,8 @@ including user ratings and revenue. The columns, from the dataset table, used fo
 <li>Udacity nanodegrees classroom - <a href="https://classroom.udacity.com/nanodegrees/nd002-alg-t2/parts/cd0000/modules/306f0239-bb80-45c6-bf45-37ee745a63d6/lessons/ls0526/concepts/f41d3e13-9bbc-45a7-8e7e-14f9e5ba1607">Project workflow</a>.</li>
 <li><a href="https://pandas.pydata.org/docs/">Pandas documentation</a>.</li>
 <li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
-<li><a href="https://sparkbyexamples.com/pandas/pandas-dataframe-query-examples/">sparkbyexamples}</a></li>
+<li><a href="https://sparkbyexamples.com/pandas/pandas-dataframe-query-examples/">sparkbyexamples}</a>.</li>
+<li><a href="https://www.geeksforgeeks.org/">geeksforgeeks</a>.</li>
 </ul>
 </blockquote>
 
